@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+    <title>Hello, world!</title>
+    <script src="https://unpkg.com/vue@3" charset="utf-8"></script>
+    <style media="screen">
+    body {
+      text-align: center;
+      background-color: #a3b9ff;
+      font-family: 'Merriweather', serif;
+      font-size: 30px;
+
+    }
+
+    div#app {
+      padding-top: 200px
+    }
+    </style>
+  </head>
+  <body>
+
+<div id="app">
+  <div v-if="showBooks">
+
+<span>
+  {{ title }}
+</span>
+<br>
+<br>
+<span>
+  {{ author }}
+</span>
+<br>
+<br>
+<span>
+  {{ age }}
+</span>
+<br><br>
+
+</div>
+<button  @click="toggleShowBooks">
+  <span v-if="showBooks">Hide Books</span>
+  <span v-else>Show Books</span>
+</button>
+<br>
+<br>
+<div v-show="showBooks">
+  Currently showing books
+</div>
+</div>
+
+
+
+<script src="youssef.js" charset="utf-8"></script>
+  </body>
+</html>
